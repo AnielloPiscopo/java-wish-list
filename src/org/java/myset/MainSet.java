@@ -11,7 +11,7 @@ public class MainSet {
 		int numOfNums = 5;
 		
 		for(int i=0 ; i<numOfNums ; i++) {
-			int rndNum = rnd.nextInt(10);
+			int rndNum = rnd.nextInt();
 			
 			numsList.add(rndNum);
 		}
