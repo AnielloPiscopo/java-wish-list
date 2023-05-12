@@ -19,12 +19,20 @@ public class Main {
 					+ "\n2)Finisci di compilare la lista;");
 			userChoise = in.nextInt();
 			
-			if(userChoise == 1) {
-				System.out.print("Cosa vuoi inserire? ");
-				String gift = in.next();
+			if(userChoise != 1) {
+				System.out.println("Scelta non valida, riprova");
+				continue;
+			}
+			
+			System.out.print("Cosa vuoi inserire? ");
+			in.nextLine();
+			String gift = in.nextLine();
+			
+			if(gift.trim() != "") {
 				wishList.add(gift);
 				wishListLng++;
 			}
+
 		}while(userChoise!=2);
 		
 		System.out.println("Questa è la tua lista di desideri: " + wishList);
