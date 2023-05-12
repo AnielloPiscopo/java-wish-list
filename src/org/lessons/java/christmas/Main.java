@@ -13,7 +13,7 @@ public class Main {
 		int userChoise = 0;
 		
 		do {
-			System.out.println(wishListLng);
+			System.out.println("La tua lista dei desideri contiene " + wishListLng + ((wishListLng == 1) ? " un elemento" : " elementi"));
 			System.out.println("Cosa vuoi fare"
 					+ "\n1)Aggiungere regalo nella lista dei desideri;"
 					+ "\n2)Finisci di compilare la lista;");
@@ -27,7 +27,7 @@ public class Main {
 			}
 		}while(userChoise!=2);
 		
-		System.out.println(wishList);
+		System.out.println("Questa è la tua lista di desideri: " + wishList);
 		
 		in.close();
 	}
