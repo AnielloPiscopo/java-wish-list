@@ -1,8 +1,6 @@
 package org.java.mymap;
 
-import java.util.Arrays;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.Map;
 
 public class MainMap {
@@ -13,12 +11,14 @@ public class MainMap {
 		Map<String , Integer> myMap = new HashMap<>();
 		for (String word : str.replaceAll("[^a-zA-Z0-9]", " ").toLowerCase().split(" ")) {
 			
-			if (myMap.containsKey(word)) {
-				
-				myMap.put(word, myMap.get(word) + 1);
-			} else {
-				myMap.put(word, 1);
-			}
+//			if (myMap.containsKey(word)) {
+//				
+//				myMap.put(word, myMap.get(word) + 1);
+//			} else {
+//				myMap.put(word, 1);
+//			}
+			
+			myMap.put(word, 1 + (myMap.containsKey(word) ? myMap.get(word) : 0));
 		}
 		
 		myMap.remove("");
