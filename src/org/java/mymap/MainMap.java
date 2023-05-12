@@ -11,12 +11,9 @@ public class MainMap {
 
 		
 		Map<String , Integer> myMap = new HashMap<>();
-		System.out.println(Arrays.asList(str.replaceAll("[^a-zA-Z0-9]", " ").split(" ")));
-		for (String word : Arrays.asList(str.replaceAll("[^a-zA-Z0-9]", " ").split(" "))) {
-
-			if (word.equals(' ')) continue;
+		for (String word : str.replaceAll("[^a-zA-Z0-9]", " ").toLowerCase().split(" ")) {
 			
-			if (myMap.containsKey(word) && word=="") {
+			if (myMap.containsKey(word)) {
 				
 				myMap.put(word, myMap.get(word) + 1);
 			} else {
